@@ -1,3 +1,9 @@
+/*
+ * 	AUTHOR : PULKIT SHARMA
+ */
+
+
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
@@ -55,7 +61,7 @@ public class WeatherInformation {
 	}
 	
 	// FOR TABLE CREATION 
-	public static void tableCreation(boolean str,Statement stmt) {
+	public static void tableCreation(boolean str,Statement stmt) throws InterruptedException {
 		if(!str) {
 			try {
 				String sql = "CREATE TABLE "+dbName+ "( "+
@@ -66,11 +72,13 @@ public class WeatherInformation {
 		                   "atm_nitrogen float NOT NULL, "+
 		                   "atm_co2 float NOT NULL, "+
 		                   "humidity float NOT NULL, "+
-		                   "date datetime default CURRENT_TIMESTAMP);";
+		                   "date datetime default CURRENT_TIMESTAMP,"+
+		                   "PRIMARY KEY (id) );";
 				stmt.executeUpdate(sql);
 				System.out.println("[ + ] TABLE CREATED SUCCESSFULLY ");
 			}catch(Exception e) {
-				System.out.print(e);
+				System.err.println(e);
+				Thread.sleep(5000);
 			}				
 		}
 	}
