@@ -8,8 +8,14 @@ import java.sql.DriverManager;
 import java.sql.Statement;
 
 
+
 public class ZooManagement {
 	static Scanner sc = new Scanner(System.in);
+	/*
+	 * ENCODED STRING
+	 */
+	static String sqlImpString = "Uzqpny Xmfwrf";
+	
 	public static void main(String args[]) {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");

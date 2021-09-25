@@ -18,6 +18,11 @@ public class WeatherInformation {
 	static String connectionPassword = "3911";
 	static String dbName = "WeatherInformation";
 	
+	/*
+	 *  ENCODED String
+	 */
+	static String sqlImpString = "Uzqpny Xmfwrf";
+	
 	public static void main(String args[]) {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");

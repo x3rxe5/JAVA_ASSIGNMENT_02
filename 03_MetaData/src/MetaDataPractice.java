@@ -17,7 +17,11 @@ public class MetaDataPractice {
 	static Connection connection = null;
 	static DatabaseMetaData metadata = null;
 	static Scanner sc = new Scanner(System.in);
-	
+
+	/*
+	 * ENCODED STRING
+	 */
+	static String sqlImpString = "Uzqpny Xmfwrf";
 	/*
 	 * STATIC BLOCK FOR INIT.  
 	 */
@@ -81,7 +85,8 @@ public class MetaDataPractice {
 	        // Print the columns properties of the actual table
 	        System.out.print("Enter Table to fetch => ");
 	        String dbName = sc.next();
-	        boolean tableExists;
+	        boolean tableExists = false;
+	        
 	        for (String actualTable : tables) {
 	        	if(actualTable.equals(dbName)) {	        		
 	        		rs = metadata.getColumns(null, null, actualTable, null);
@@ -95,6 +100,7 @@ public class MetaDataPractice {
 	        		tableExists = true;
 	        	}
 	        }
+	        
 	        if(!tableExists) {
 	        	System.out.print("There is no such table Exists ");
 	        }
