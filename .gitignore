@@ -1,0 +1,13 @@
+
+.metadata/
+
+01_ZooManagement/bin/
+01_ZooManagement/.classpath
+01_ZooManagement/.project
+01_ZooManagement/.settings/
+
+02_WeatherInformation/bin/
+02_WeatherInformation/.classpath
+02_WeatherInformation/.project
+02_WeatherInformation/.settings/
+
